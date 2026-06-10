@@ -1,6 +1,7 @@
 package net.javaguides.bancking_app.entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.PositiveOrZero;
 import lombok.AllArgsConstructor;
@@ -23,6 +24,8 @@ public class Customer {
 
     @PositiveOrZero(message = "Balance cannot be negative")
     private Double balance;
+
+    @Email(message = "Invalid email format")
     private String email;
     private String phoneNumber;
 }
