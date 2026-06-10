@@ -1,6 +1,7 @@
 package net.javaguides.bancking_app.entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -15,7 +16,7 @@ public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer customerId;
-    @NonNull
+    @NotBlank(message = "Customer name cannot be empty")
     private String customerName;
     private String accountNumber;
     private Double balance;
