@@ -1,5 +1,6 @@
 package net.javaguides.bancking_app.Controllers;
 
+import jakarta.validation.Valid;
 import net.javaguides.bancking_app.entity.Customer;
 import net.javaguides.bancking_app.repository.CustomerRepository;
 import net.javaguides.bancking_app.services.CustomerServices;
@@ -15,7 +16,7 @@ public class CustomerController {
     @Autowired
     CustomerServices customerServices;
     @PostMapping("add")
-    public Customer addCustomer(@RequestBody Customer customer){
+    public Customer addCustomer( @Valid @RequestBody Customer customer ){
         return customerServices.addCustomer(customer);
     }
     @GetMapping("getAll")
