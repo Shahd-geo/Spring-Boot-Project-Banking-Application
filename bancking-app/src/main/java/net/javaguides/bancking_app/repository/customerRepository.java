@@ -1,4 +1,7 @@
 package net.javaguides.bancking_app.repository;
 
-public interface customerRepository {
+import net.javaguides.bancking_app.entity.Customer;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface customerRepository extends JpaRepository<Customer,Integer> {
 }
