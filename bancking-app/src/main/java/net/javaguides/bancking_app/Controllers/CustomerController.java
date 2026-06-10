@@ -30,6 +30,10 @@ public class CustomerController {
     public List<Customer> getCustomerByName(@RequestParam String customerName){
         return customerServices.getCustomerByName(customerName);
     }
+    @PutMapping("update")
+    public Customer updateCustomer(@RequestBody Customer customer, @RequestParam Integer id){
+        return customerServices.updateCustomer(id, customer);
+    }
 
 
 
