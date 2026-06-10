@@ -20,6 +20,9 @@ public class Customer {
     private Integer customerId;
     @NotBlank(message = "Customer name cannot be empty")
     private String customerName;
+
+    @NotBlank(message = "Account number cannot be empty")
+    @Column(unique = true)
     private String accountNumber;
 
     @PositiveOrZero(message = "Balance cannot be negative")
