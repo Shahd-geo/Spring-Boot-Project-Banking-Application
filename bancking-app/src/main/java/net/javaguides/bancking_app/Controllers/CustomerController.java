@@ -32,7 +32,7 @@ public class CustomerController {
         return customerServices.getCustomerByName(customerName);
     }
     @PutMapping("update")
-    public Customer updateCustomer(@RequestBody Customer customer, @RequestParam Integer id){
+    public Customer updateCustomer( @Valid @RequestBody Customer customer, @RequestParam Integer id){
         return customerServices.updateCustomer(id, customer);
     }
     @DeleteMapping("deleteById")
