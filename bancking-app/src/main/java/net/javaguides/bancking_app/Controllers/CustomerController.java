@@ -22,6 +22,10 @@ public class CustomerController {
     public List<Customer> getAllCustomers(){
         return customerServices.getAllCustomers();
     }
+    @GetMapping("getById")
+    public Customer getCustomerById(@RequestParam Integer id){
+        return customerServices.getCustomerById(id);
+    }
 
 
 }
