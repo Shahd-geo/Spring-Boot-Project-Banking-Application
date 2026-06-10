@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.NonNull;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -14,6 +15,7 @@ public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer customerId;
+    @NonNull
     private String customerName;
     private String accountNumber;
     private Double balance;
