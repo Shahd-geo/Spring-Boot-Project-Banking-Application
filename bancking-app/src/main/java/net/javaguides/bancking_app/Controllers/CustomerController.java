@@ -34,6 +34,10 @@ public class CustomerController {
     public Customer updateCustomer(@RequestBody Customer customer, @RequestParam Integer id){
         return customerServices.updateCustomer(id, customer);
     }
+    @DeleteMapping("deleteById")
+    public Boolean deleteCustomer(@RequestParam Integer id){
+        return customerServices.deleteCustomer(id);
+    }
 
 
 
