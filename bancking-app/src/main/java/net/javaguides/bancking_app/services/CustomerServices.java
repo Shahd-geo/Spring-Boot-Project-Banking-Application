@@ -1,5 +1,6 @@
 package net.javaguides.bancking_app.services;
 
+import net.javaguides.bancking_app.entity.Customer;
 import net.javaguides.bancking_app.repository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -8,4 +9,9 @@ import org.springframework.stereotype.Service;
 public class CustomerServices {
     @Autowired
     private CustomerRepository customerRepository;
+
+
+    public Customer addCustomer(Customer customer){
+        return customerRepository.save(customer);
+    }
 }
